@@ -5,11 +5,15 @@ public class Musician {
     private String instrument;
     private boolean available;
 
+    // Static variable to count total musicians
+    private static int totalMusicians = 0;
+
     // Constructor
     public Musician(String name, String instrument) {
         this.name = name;
         this.instrument = instrument;
         this.available = true; // Musicians are available by default
+        totalMusicians++; // Increment the static counter whenever a new musician is created
     }
 
     // Record function
@@ -28,8 +32,8 @@ public class Musician {
         System.out.println(this.name + " has finished their recording session.");
     }
 
-    // Getter for availability
-    public boolean isAvailable() {
-        return this.available;
+    // Static method to get total number of musicians created
+    public static int getTotalMusicians() {
+        return totalMusicians;
     }
 }

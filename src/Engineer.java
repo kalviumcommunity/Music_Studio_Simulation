@@ -5,6 +5,9 @@ public class Engineer {
     private String role;  // "Sound Engineer" or "Mixing Engineer"
     private boolean available;
 
+    // Static variable to track total mixing sessions
+    private static int totalSessions = 0;
+
     // Constructor
     public Engineer(String name, String role) {
         this.name = name;
@@ -17,6 +20,7 @@ public class Engineer {
         if (this.available) {
             System.out.println(this.name + " is mixing the track.");
             this.available = false;  // The engineer is busy while mixing
+            totalSessions++; // Increment the session counter
         } else {
             System.out.println(this.name + " is busy.");
         }
@@ -28,8 +32,8 @@ public class Engineer {
         System.out.println(this.name + " has finished their task.");
     }
 
-    // Getter for availability
-    public boolean isAvailable() {
-        return this.available;
+    // Static method to get total mixing sessions
+    public static int getTotalSessions() {
+        return totalSessions;
     }
 }
