@@ -33,12 +33,6 @@ public class Equipment {
         }
     }
 
-    // Function to mark equipment as faulty
-    public void markAsFaulty() {
-        this.isFaulty = true;
-        System.out.println(this.type + " is now marked as faulty.");
-    }
-
     // Function to mark equipment as available after a session
     public void finishSession() {
         this.inUse = false;

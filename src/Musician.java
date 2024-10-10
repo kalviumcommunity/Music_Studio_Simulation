@@ -22,15 +22,6 @@ public class Musician {
         }
     }
 
-    // Retake function
-    public void retake() {
-        if (!this.available) {
-            System.out.println(this.name + " is doing a retake.");
-        } else {
-            System.out.println(this.name + " has no recordings to retake.");
-        }
-    }
-
     // Function to make the musician available again after a session
     public void finishSession() {
         this.available = true;

@@ -22,16 +22,6 @@ public class Engineer {
         }
     }
 
-    // Function to master a track
-    public void masterTrack() {
-        if (this.available) {
-            System.out.println(this.name + " is mastering the track.");
-            this.available = false;  // The engineer is busy while mastering
-        } else {
-            System.out.println(this.name + " is busy.");
-        }
-    }
-
     // Function to finish a session and make the engineer available again
     public void finishSession() {
         this.available = true;
