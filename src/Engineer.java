@@ -15,6 +15,16 @@ public class Engineer {
         this.available = true;  // Engineers are available by default
     }
 
+        // Function to mix a track
+        public void mixTrack() {
+            if (this.available) {
+                System.out.println(this.name + " is mixing the track.");
+                this.available = false;  // The engineer is busy while mixing
+            } else {
+                System.out.println(this.name + " is busy.");
+            }
+        }
+
     // Function to finish a session and make the engineer available again
     public void finishSession() {
         this.available = true;
@@ -26,9 +36,9 @@ public class Engineer {
         return totalSessions;
     }
 
-    // Static method to provide an overview of the engineer's work
-    public static void showEngineerOverview() {
-        System.out.println("Total Mixing Sessions Handled: " + getTotalSessions());
-        System.out.println("Engineers ensure high-quality sound and track mixing.");
-    }
+        // Static method to provide an overview of the engineer's work
+        public static void showEngineerOverview() {
+            System.out.println("Total Mixing Sessions Handled: " + getTotalSessions());
+            System.out.println("Engineers ensure high-quality sound and track mixing.");
+        }
 }
