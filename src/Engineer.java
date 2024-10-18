@@ -26,5 +26,9 @@ public class Engineer {
         return totalSessions;
     }
 
-
+    // Static method to provide an overview of the engineer's work
+    public static void showEngineerOverview() {
+        System.out.println("Total Mixing Sessions Handled: " + getTotalSessions());
+        System.out.println("Engineers ensure high-quality sound and track mixing.");
+    }
 }
