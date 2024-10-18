@@ -44,8 +44,5 @@ public class Main {
         mixer.finishSession();
         soundEngineer.finishSession();
 
-        // Call the static member function to show engineer overview
-        System.out.println("\n--- Engineer Overview ---");
-        Engineer.showEngineerOverview();
     }
 }
