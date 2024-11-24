@@ -12,7 +12,7 @@ public class Engineer extends SessionMember {
         this.available = true;
     }
 
-    // Overloaded method to mix track with or without a specific equipment type
+    // Overloaded method to mix track without equipment
     public void mixTrack() {
         if (this.available) {
             System.out.println(getName() + " is mixing the track.");
@@ -34,6 +34,7 @@ public class Engineer extends SessionMember {
         }
     }
 
+    // Method to finish session (Overridden method)
     @Override
     public void finishSession() {
         this.available = true;

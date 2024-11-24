@@ -15,5 +15,6 @@ public abstract class SessionMember {
         this.name = name;
     }
 
+    // Abstract method to be overridden by subclasses
     public abstract void finishSession();
 }
