@@ -3,14 +3,12 @@ package src;
 public class Musician extends SessionMember {
     private String instrument;
     private boolean available;
-    private static int totalMusicians = 0;
 
     // Constructor
     public Musician(String name, String instrument) {
         super(name);
         this.instrument = instrument;
         this.available = true;
-        totalMusicians++;
     }
 
     public String getInstrument() {
@@ -29,7 +27,7 @@ public class Musician extends SessionMember {
         this.available = available;
     }
 
-    // Overloaded method to record with or without additional instructions
+    // Overloaded record method
     public void record() {
         if (this.available) {
             System.out.println(getName() + " is recording with " + this.instrument + ".");
@@ -39,7 +37,7 @@ public class Musician extends SessionMember {
         }
     }
 
-    // Overloaded method to record with additional instruction
+    // Overloaded record method with instruction
     public void record(String instruction) {
         if (this.available) {
             System.out.println(getName() + " is recording with " + this.instrument + ". Instruction: " + instruction);
@@ -49,6 +47,7 @@ public class Musician extends SessionMember {
         }
     }
 
+    // Method to finish session (Overridden method)
     @Override
     public void finishSession() {
         if (!this.available) {
@@ -57,9 +56,5 @@ public class Musician extends SessionMember {
         } else {
             System.out.println(getName() + " was already marked as available.");
         }
-    }
-
-    public static int getTotalMusicians() {
-        return totalMusicians;
     }
 }

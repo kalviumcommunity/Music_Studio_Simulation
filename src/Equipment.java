@@ -12,7 +12,6 @@ public class Equipment {
         this.isFaulty = false;
     }
 
-    // Function to check equipment status
     public void checkStatus() {
         if (this.isFaulty) {
             System.out.println(this.type + " is faulty and needs repair.");
@@ -23,7 +22,6 @@ public class Equipment {
         }
     }
 
-    // Function to assign equipment to a session
     public void assignToSession() {
         if (!this.inUse && !this.isFaulty) {
             System.out.println(this.type + " is now assigned to a session.");
@@ -33,7 +31,6 @@ public class Equipment {
         }
     }
 
-    // Function to mark equipment as available after a session
     public void finishSession() {
         this.inUse = false;
         System.out.println(this.type + " is now available after the session.");
