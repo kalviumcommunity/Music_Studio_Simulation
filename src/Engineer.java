@@ -1,74 +1,58 @@
 package src;
 
-public class Engineer {
-    private String name;
-    private String role; // "Sound Engineer" or "Mixing Engineer"
+public class Engineer extends SessionMember {
+    private String role; // Protected for subclass access
     private boolean available;
-
-    // Static variable to track total mixing sessions
-    private static int totalSessions = 0;
+    private static int totalSessions = 0; // Static variable
 
     // Constructor
     public Engineer(String name, String role) {
-        this.name = name;
+        super(name); // Call to parent constructor
         this.role = role;
-        this.available = true; // Engineers are available by default
+        this.available = true;
     }
 
-    // Accessor for name
-    public String getName() {
-        return name;
-    }
-
-    // Mutator for name
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    // Accessor for role
+    // Accessors and mutators
     public String getRole() {
         return role;
     }
 
-    // Mutator for role
     public void setRole(String role) {
         this.role = role;
     }
 
-    // Accessor for availability
     public boolean isAvailable() {
         return available;
     }
 
-    // Mutator for availability
     public void setAvailable(boolean available) {
         this.available = available;
     }
 
-    // Function to mix a track
+    // Mix track method
     public void mixTrack() {
         if (this.available) {
-            System.out.println(this.name + " is mixing the track.");
-            this.available = false; // The engineer is busy while mixing
+            System.out.println(getName() + " is mixing the track.");
+            this.available = false;
+            totalSessions++;
         } else {
-            System.out.println(this.name + " is busy.");
+            System.out.println(getName() + " is busy.");
         }
     }
 
-    // Function to finish a session and make the engineer available again
+    // Overridden method from SessionMember
+    @Override
     public void finishSession() {
         this.available = true;
-        System.out.println(this.name + " has finished their task.");
+        System.out.println(getName() + " has finished their task.");
     }
 
-    // Static method to get total mixing sessions
+    // Static methods
     public static int getTotalSessions() {
         return totalSessions;
     }
 
-    // Static method to provide an overview of the engineer's work
     public static void showEngineerOverview() {
-        System.out.println("Total Mixing Sessions Handled: " + getTotalSessions());
-        System.out.println("Engineers ensure high-quality sound and track mixing.");
+        System.out.println("Total Mixing Sessions Handled: " + totalSessions);
     }
 }
