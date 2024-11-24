@@ -8,11 +8,11 @@ public class Equipment {
     // Constructor
     public Equipment(String type) {
         this.type = type;
-        this.inUse = false;  // Equipment is available by default
-        this.isFaulty = false;  // Equipment is working by default
+        this.inUse = false;
+        this.isFaulty = false;
     }
 
-    // Function to check if equipment is in use or faulty
+    // Function to check equipment status
     public void checkStatus() {
         if (this.isFaulty) {
             System.out.println(this.type + " is faulty and needs repair.");
