@@ -16,6 +16,36 @@ public class Musician {
         totalMusicians++; // Increment the static counter whenever a new musician is created
     }
 
+    // Accessor for name
+    public String getName() {
+        return name;
+    }
+
+    // Mutator for name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Accessor for instrument
+    public String getInstrument() {
+        return instrument;
+    }
+
+    // Mutator for instrument
+    public void setInstrument(String instrument) {
+        this.instrument = instrument;
+    }
+
+    // Accessor for availability
+    public boolean isAvailable() {
+        return available;
+    }
+
+    // Mutator for availability
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
     // Record function
     public void record() {
         if (this.available) {
