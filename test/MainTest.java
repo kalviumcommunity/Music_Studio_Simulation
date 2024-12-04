@@ -19,7 +19,7 @@ public class MainTest {
 
         System.out.println("\n--- Testing Equipment Functionality ---");
         Equipment guitar = new Equipment("Guitar");
-        guitar.assignToSession();
+        guitar.performSessionTask();
         guitar.finishSession();
 
         System.out.println("\n--- Testing Session Tracker ---");

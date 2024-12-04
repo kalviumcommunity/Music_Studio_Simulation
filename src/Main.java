@@ -2,17 +2,12 @@ package src;
 
 public class Main {
     public static void main(String[] args) {
-        SessionMember[] members = {
-            new Musician("John", "Guitar"),
-            new Engineer("Lucas", "Sound Engineer")
-        };
-
-        Equipment mic = new Equipment("Microphone");
+        // Creating session members and equipment
+        Musician musician = new Musician("John", "Guitar");
+        Engineer engineer = new Engineer("Lucas", "Sound Engineer");
 
         System.out.println("--- Session Tasks ---");
-        for (SessionMember member : members) {
-            member.performSessionTask();
-        }
-        mic.performSessionTask();
+        musician.record();  // Musicians perform recording
+        engineer.mixTrack();  // Engineers perform mixing
     }
 }

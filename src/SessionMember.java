@@ -14,6 +14,4 @@ public abstract class SessionMember {
     public void setName(String name) {
         this.name = name;
     }
-
-    public abstract void performSessionTask();
 }

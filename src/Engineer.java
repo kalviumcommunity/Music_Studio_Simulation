@@ -1,6 +1,6 @@
 package src;
 
-public class Engineer extends SessionMember {
+public class Engineer extends SessionMember implements MixingTask {
     private String role;
 
     public Engineer(String name, String role) {
@@ -9,7 +9,7 @@ public class Engineer extends SessionMember {
     }
 
     @Override
-    public void performSessionTask() {
+    public void mixTrack() {
         System.out.println(getName() + " is mixing the track as a " + role + ".");
     }
 }
