@@ -12,7 +12,7 @@ public class Main {
         // Create an engineer
         Engineer soundEngineer = new Engineer("Lucas", "Sound Engineer");
 
-        // Create some equipment
+        // Create equipment
         Equipment mic = new Equipment("Microphone");
         Equipment mixer = new Equipment("Mixer");
 
@@ -22,19 +22,16 @@ public class Main {
             musician.record();
         }
 
-        // Check equipment status and assign them to sessions
+        // Equipment status
         System.out.println("\n--- Equipment Check ---");
-        mic.checkStatus();
-        mixer.checkStatus();
-        
         mic.assignToSession();
         mixer.assignToSession();
 
-        // Engineer mixing the track
+        // Mixing
         System.out.println("\n--- Mixing Session ---");
         soundEngineer.mixTrack();
 
-        // Complete the session
+        // Session completion
         System.out.println("\n--- Session Complete ---");
         for (Musician musician : musicians) {
             musician.finishSession();
@@ -44,8 +41,8 @@ public class Main {
         mixer.finishSession();
         soundEngineer.finishSession();
 
-        // Call the static member function to show engineer overview
+        // Show session stats
         System.out.println("\n--- Engineer Overview ---");
-        Engineer.showEngineerOverview();
+        SessionTracker.showStats();
     }
 }
