@@ -1,6 +1,6 @@
 package src;
 
-public class Musician extends SessionMember {
+public class Musician extends SessionMember implements RecordingTask {
     private String instrument;
 
     public Musician(String name, String instrument) {
@@ -9,7 +9,7 @@ public class Musician extends SessionMember {
     }
 
     @Override
-    public void performSessionTask() {
+    public void record() {
         System.out.println(getName() + " is recording with " + instrument + ".");
     }
 }
