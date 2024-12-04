@@ -11,5 +11,9 @@ public abstract class SessionMember {
         return name;
     }
 
-    public abstract void finishSession();
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public abstract void performSessionTask();
 }
