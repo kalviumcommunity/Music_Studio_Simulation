@@ -11,10 +11,5 @@ public abstract class SessionMember {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    // Abstract method to be overridden by subclasses
     public abstract void finishSession();
 }
